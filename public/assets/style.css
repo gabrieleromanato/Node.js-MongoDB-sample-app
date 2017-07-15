@@ -1,0 +1,502 @@
+@import url(font-awesome/css/font-awesome.min.css);
+@import url(flatpickr.min.css);
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900');
+
+body {
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:focus {
+    outline-style: none;
+}
+
+.responsive {
+    display: block;
+    margin: 0 auto;
+    max-width: 100% !important;
+    height: auto;
+}
+
+.map-wrap {
+    width: 200px;
+}
+
+.map-title {
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1em;
+    font-weight: 900;
+}
+
+.map-img {
+    margin: 0;
+    width: 100%;
+}
+
+.flatpickr-calendar.open {
+    z-index: 2000000000000000;
+}
+
+.msg {
+    margin: 1em 0;
+    font-weight: bold;
+}
+
+.success {
+    color: #080;
+}
+
+.error {
+    color: #d00;
+}
+
+a:link,
+a:visited {
+    color: #1abc9c;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th {
+    padding: 0.5em;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+td {
+    padding: 1em;
+    border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background: #e8e8e8;
+}
+
+input, select, textarea {
+    font: 1em Lato, sans-serif;
+    -webkit-appearance: none !important;
+    border-radius: 0 !important;
+}
+
+input[type=text] {
+    padding: 5px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+select {
+    padding: 5px;
+    height: 2em;
+}
+
+button,
+input[type=submit],
+.button,
+a.button {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    white-space: nowrap;
+    margin: 5px;
+    padding: 0 22px;
+    font-size: 14px;
+    height: 2.3em;
+    line-height: 2.3em;
+    background-color: #1ABC9C;
+    color: #FFF;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+#site-header #top {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    font-size: 90%;
+}
+
+#site-title {
+    margin: 0;
+    line-height: 1;
+}
+
+#logo,
+#logo:hover {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: url(images/logo.png) no-repeat;
+    text-indent: -999999em;
+}
+
+#open-nav {
+    color: #000;
+    font-size: 24px;
+}
+
+#open-nav:hover {
+    color: #888;
+}
+
+#close-nav,
+#close-nav:hover {
+    color: #fff;
+    font-size: 24px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    margin-left: -12px;
+}
+
+#navigation {
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000000000000;
+    background: #1ABC9C;
+    color: #fff;
+    height: 100%;
+    align-items: center;
+}
+
+#navigation.visible {
+    display: flex;
+}
+
+#menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    width: 100%;
+}
+
+#menu li {
+    display: block;
+    margin: 1em 0;
+}
+
+#navigation a,
+#navigation a:hover {
+    font-size: 22px;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: .1em;
+}
+
+#navigation a:hover {
+}
+
+#sub-header {
+    height: 400px;
+    background: url(images/header.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+#sub-header-wrap {
+    width: 100%;
+}
+
+#page-title {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+#main {
+    padding: 5%;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+#restaurants {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#restaurants li {
+    width: 30.33333%;
+    margin: 1em 1.5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 200px;
+}
+
+#restaurants li a {
+    padding: 1em;
+    margin: 5%;
+    border: 1px solid #fff;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    min-height: 200px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+#restaurants li h3 {
+    font-size: 1em;
+    text-transform: uppercase;
+    line-height: 1.5;
+    padding-top: 20%;
+}
+
+#restaurants li a:hover h3 {
+    color: #1abc9c;
+}
+
+#restaurants li p {
+    color: #888;
+    font-size: 90%;
+}
+
+#restaurants li h3:after {
+    content: '';
+    display: block;
+    width: 1em;
+    height: 2px;
+    background: #ccc;
+    margin: 5px 0;
+}
+
+@media screen and (max-width: 768px) {
+    #restaurants {
+        display: block;
+    }
+    #restaurants li {
+        width: 100%;
+        margin: 1em 0;
+    }
+    #restaurants li a {
+        margin: 0;
+        padding: 0 2em;
+        border: none;
+    }
+}
+
+#search {
+    margin: 1.5em 0;
+    text-align: center;
+    width: 100%;
+
+}
+
+#q {
+    border: none;
+    min-width: 200px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    padding-left: 9px;
+}
+
+#search-btn {
+    margin: 5px 0;
+    position: relative;
+    left: -4px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+#map,
+#related-map {
+    width: 100%;
+    height: 300px;
+    margin: 1.5em 0;
+}
+
+#restaurant h1 small {
+    font-size: 16px;
+    display: block;
+    margin: 8px 0;
+    font-family: serif;
+    text-transform: none;
+    font-weight: normal;
+    color: #888;
+}
+
+.header {
+    height: 400px;
+    background: url(images/restaurant.jpg) no-repeat 0 0;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header-content {
+    width: 100%;
+    text-align: center;
+    color: #000;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.header-content h1 {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+#score {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #1abc9c;
+    font-size: 22px;
+    font-family: serif;
+    border-radius: 50%;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.breadcrumb {
+    background: transparent;
+    margin: 1.5em 0;
+    font-size: 12px;
+    text-transform: capitalize;
+    text-align: right;
+}
+
+.breadcrumb-item {
+    display: inline-block;
+    margin-left: 0.4em;
+}
+
+.breadcrumb-item:after {
+    content: '>';
+    margin-left: 0.4em;
+    display: inline-block;
+}
+
+a.breadcrumb-item,
+a.breadcrumb-item:hover {
+    text-decoration: none;
+    color: #888;
+}
+
+span.breadcrumb-item {
+    color: #000;
+    font-weight: bold;
+}
+span.breadcrumb-item:after {
+    content: none;
+}
+
+
+
+#voting-form {
+    margin: 1.8em 0;
+}
+
+#voting-form #vote,
+#voting-form #grade {
+    margin-right: 0.6em;
+}
+
+#booking {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: #fff;
+    top: 0;
+    left: 0;
+    z-index: 1000000000000;
+    align-items: center;
+}
+
+#booking.visible {
+    display: flex;
+}
+
+#close-booking,
+#close-booking:hover {
+    color: #000;
+    font-size: 24px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    margin-left: -12px;
+}
+
+#booking-form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+#booking-form div {
+    margin-bottom: 1em;
+}
+
+#booking-form div input {
+    display: block;
+    width: 100%;
+    background: #fff;
+    padding: 12px 7px;
+    border: 1px solid #ddd;
+}
+
+#booking-form p input {
+    display: block;
+    width: 100%;
+    height: 2.8em;
+    line-height: 2.8;
+    margin: 0;
+}
+
+#booking-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    #voting-form #vote,
+    #voting-form #grade,
+    #voting-form input[type=submit] {
+        display: block;
+        margin: 1em 0;
+        width: 100%;
+    }
+}
+
+#site-info {
+    text-align: center;
+    background: #222;
+    color: #fff;
+    padding: 3em 0;
+    font-size: 85%;
+}

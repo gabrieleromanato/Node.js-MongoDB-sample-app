@@ -1,0 +1,18 @@
+<table>
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Score</th>
+        </tr>
+    </thead>
+    <tbody>
+    {{#each restaurants}}
+        <tr>
+            <td>
+                <a href="/restaurants/{{this._id.restaurant_id}}">{{this._id.name}}</a>
+            </td>
+            <td>{{this.scores}}</td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>

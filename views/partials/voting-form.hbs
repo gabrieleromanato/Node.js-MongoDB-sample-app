@@ -1,0 +1,16 @@
+<form action="" method="post" id="voting-form" class="form-inline">
+    <div class="input-group">
+        <input type="text" placeholder="0-100" name="vote" id="vote" class="form-control">
+        <select name="grade" id="grade">
+            <option value="">Choose a grade</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+        </select>
+        <input type="hidden" id="restaurant_id" name="restaurant_id" value="{{restaurant._id}}">
+        <input type="submit"  value="Vote">
+    </div>
+</form>

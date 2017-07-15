@@ -1,0 +1,18 @@
+{
+  "name": "Restaurants",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sample app",
+  "author": "Gabriele Romanato <gabriele@gabrieleromanato.com>",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "express": "^4.13.1",
+    "express-handlebars": "^3.0.0",
+    "express-url-breadcrumb": "0.0.8",
+    "mongoose": "4.9.9",
+    "nodemailer": "^4.0.1",
+    "serve-favicon": "^2.4.2",
+    "validator": "^8.0.0"
+  },
+  "license": "MIT"
+}

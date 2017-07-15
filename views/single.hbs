@@ -1,0 +1,33 @@
+<article id="restaurant">
+
+    <div class="header" style="background-image: url({{{the_image restaurant}}})">
+
+        <div class="header-content">
+            <p id="score">{{totalscore restaurant.grades}}</p>
+            <h1>{{restaurant.name}}<small>{{restaurant.cuisine}}</small></h1>
+            <p class="lead">{{restaurant.address.street}} {{restaurant.address.building}}, {{restaurant.borough}}</p>
+            <p class="book"><a href="#booking" class="button" id="book">Book now</a></p>
+        </div>
+    </div>
+    {{{googlemap restaurant.address.coord}}}
+    <table id="grades">
+        <thead>
+            <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Grade</th>
+                <th scope="col">Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each restaurant.grades}}
+                <tr>
+                    <td>{{date this.date}}</td>
+                    <td>{{this.grade}}</td>
+                    <td>{{this.score}}</td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    {{> voting-form }}
+    {{> related }}
+</article>

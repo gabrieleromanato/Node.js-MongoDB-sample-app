@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{pageTitle}}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/public/assets/style.css" type="text/css" media="screen">
+
+</head>
+<body>
+<header id="site-header">
+    <div id="top">
+        <h1 id="site-title">
+            <a href="/" id="logo">Restaurants</a>
+        </h1>
+        {{> navigation }}
+    </div>
+</header>
+<div id="sub-header">
+    <div id="sub-header-wrap">
+        <h2 id="page-title">{{pageTitle}}</h2>
+        {{> search }}
+    </div>
+</div>
+
+
+<section id="main" class="container">
+
+{{#if isSingle}}
+    {{> breadcrumbs }}
+{{/if}}
+
+{{{body}}}
+
+{{#if isSingle}}
+
+    {{> booking}}
+
+{{/if}}
+
+</section>
+<footer id="site-info">
+    <p id="copy">&copy; Restaurants </p>
+</footer>
+{{#if isSingle}}
+<script src="https://maps.googleapis.com/maps/api/js?key={{apiKey}}"></script>
+<script src="/public/assets/flatpickr.min.js"></script>
+{{/if}}
+<script src="/public/assets/app.js"></script>
+</body>
+</html>
